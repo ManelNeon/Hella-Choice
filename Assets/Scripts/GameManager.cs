@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [HideInInspector] public bool canPlayerSend;
+
     AudioSource audioSource;
 
     [Header("NPC Related")]
@@ -181,151 +183,93 @@ public class GameManager : MonoBehaviour
             prideHellScore -= 1;
         }
 
-        audioSource.PlayOneShot(notificationSound);
+        StartCoroutine(SendNPCAway());
 
-        TabletOpenAndClose();
-
-        //Play Animation Here, then we open the tablet again, we show the player how hell has changed and we send the new NPC
-
-        TabletOpenAndClose();
-
-        OpenHellChoices();
-
-        ChangeNPC();
-
-        npcHolder.StartDialogue();
     }
 
     public void SendToWrath(int hellScore)
     {
         wrathHellScore += hellScore;
 
-        audioSource.PlayOneShot(notificationSound);
+        StartCoroutine(SendNPCAway());
 
-        TabletOpenAndClose();
-
-        //Play Animation Here, then we open the tablet again, we show the player how hell has changed and we send the new NPC
-
-        TabletOpenAndClose();
-
-        OpenHellChoices();
-
-        ChangeNPC();
-
-        npcHolder.StartDialogue();
     }
 
     public void SendToLust(int hellScore)
     {
         lustHellScore+= hellScore;
 
-        audioSource.PlayOneShot(notificationSound);
+        StartCoroutine(SendNPCAway());
 
-        TabletOpenAndClose();
-
-        //Play Animation Here, then we open the tablet again, we show the player how hell has changed and we send the new NPC
-
-        TabletOpenAndClose();
-
-        OpenHellChoices();
-
-        ChangeNPC();
-
-        npcHolder.StartDialogue();
     }
 
     public void SendToGluttony(int hellScore)
     {
         gluttonyHellScore+= hellScore;
 
-        audioSource.PlayOneShot(notificationSound);
+        StartCoroutine(SendNPCAway());
 
-        TabletOpenAndClose();
-
-        //Play Animation Here, then we open the tablet again, we show the player how hell has changed and we send the new NPC
-
-        TabletOpenAndClose();
-
-        OpenHellChoices();
-
-        ChangeNPC();
-
-        npcHolder.StartDialogue();
     }
 
     public void SendToGreed(int hellScore)
     {
         greedHellScore+= hellScore;
 
-        audioSource.PlayOneShot(notificationSound);
+        StartCoroutine(SendNPCAway());
 
-        TabletOpenAndClose();
-
-        //Play Animation Here, then we open the tablet again, we show the player how hell has changed and we send the new NPC
-
-        TabletOpenAndClose();
-
-        OpenHellChoices();
-
-        ChangeNPC();
-
-        npcHolder.StartDialogue();
     }
 
     public void SendToSloth(int hellScore)
     {
         slothHellScore+= hellScore;
 
-        audioSource.PlayOneShot(notificationSound);
+        StartCoroutine(SendNPCAway());
 
-        TabletOpenAndClose();
-
-        //Play Animation Here, then we open the tablet again, we show the player how hell has changed and we send the new NPC
-
-        TabletOpenAndClose();
-
-        OpenHellChoices();
-
-        ChangeNPC();
-
-        npcHolder.StartDialogue();
     }
 
     public void SendToEnvy(int hellScore)
     {
         envyHellScore += hellScore;
 
-        audioSource.PlayOneShot(notificationSound);
+        StartCoroutine(SendNPCAway());
 
-        TabletOpenAndClose();
-
-        //Play Animation Here, then we open the tablet again, we show the player how hell has changed and we send the new NPC
-
-        TabletOpenAndClose();
-
-        OpenHellChoices();
-
-        ChangeNPC();
-
-        npcHolder.StartDialogue();
     }
 
     public void SendToPride(int hellScore)
     {
         prideHellScore+= hellScore;
 
+        StartCoroutine(SendNPCAway());
+    }
+
+    IEnumerator SendNPCAway()
+    {
+        npcHolder.TakeButtonsPurpose();
+
         audioSource.PlayOneShot(notificationSound);
+
+        canPlayerSend = false;
 
         TabletOpenAndClose();
 
         //Play Animation Here, then we open the tablet again, we show the player how hell has changed and we send the new NPC
 
+        yield return new WaitForSeconds(1.5f);
+
         TabletOpenAndClose();
 
         OpenHellChoices();
 
+        yield return new WaitForSeconds(1.5f);
+
+        TabletOpenAndClose();
+
+        canPlayerSend = true;
+
         ChangeNPC();
 
         npcHolder.StartDialogue();
+
+        yield break;
     }
 }

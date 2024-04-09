@@ -73,6 +73,8 @@ public class NPC : NPCFather
     // this is for when we start the dialogue
     public void StartDialogue()
     {
+        stress = 0;
+
         buttonsHolder.SetActive(false);
 
         buttonCompliment.gameObject.SetActive(true);
@@ -151,7 +153,7 @@ public class NPC : NPCFather
         buttonHellPride.onClick.AddListener(SendToPride);
     }
 
-    void TakeButtonsPurpose()
+    public void TakeButtonsPurpose()
     {
         buttonCompliment.onClick.RemoveAllListeners();
 
