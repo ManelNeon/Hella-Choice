@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NPCFather : MonoBehaviour
 {
+    public string characterName;
+
     /*because there's 7 dialogues, the array will be 7, each of them corresponding to a different dialogue
     0 - First Dialogue 1 - Complimented Dialogue 2 - Educated Dialogue 3 - Neutral Dialogue 4 - Rude Dialogue 5 - Insult Dialogue 6 - Say Nothing 7 - Stressed Dialogue
     */

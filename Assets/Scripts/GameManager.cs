@@ -111,6 +111,8 @@ public class GameManager : MonoBehaviour
         npcHolder.envyLevel = currentNPC.envyLevel;
 
         npcHolder.prideLevel = currentNPC.prideLevel;
+
+        npcHolder.characterName = currentNPC.characterName;
     }
 
     public void TabletOpenAndClose()
