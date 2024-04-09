@@ -44,13 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: "Napole\xE3o"
   dialogues:
   - "D\u2019onde vim parar? Terras quentes como o Equador? Falei  cornudo, o da barca
     enganou-me a mim? Disse ele que velejava com paragem no pante\xE3o.\u201D"
-  - as
-  - Being polite to me? I hate you.
-  - Uh... So you see I seem to be bored by your presence. Cthulhu was a better representation
-    of a god than you...
+  - "Um indiv\xEDduo que sabe o que diz. Vejo que sabes quem sou e a minha import\xE2ncia.
+    Mando todos para a guilhotina quem me trata a menos que esses n\xEDveis."
+  - "Fala comigo como se fosse o seu pai. Pois n\xE3o sou devo chamar os carrascos
+    ou procedo pela execu\xE7\xE3o mais sangrenta que alguma vez sentiu. Odeio quem
+    n\xE3o se sabe dirigir a mim \u201CEl mui muito grandioso Imperador de Fran\xE7a\u201D"
+  - "A forma como fala\u2026 Sinto-me ofendido. A indiferen\xE7a \xE9 irritante e
+    agonizante. E a sua altura\u2026 A SUA ALTURA E COMO SE MOSTRA INDIFERENTE \xC0
+    MINHA\u2026 Vou mat\xE1-lo se n\xE3o se ajoelhar!"
   - "OH! COMO SE ATREVE. Acha que est\xE1\u2026 *Cof* N\xE3o me pode tratar assim\u2026
     *Talvez at\xE9 possa\u2026* Continuando. Se o rei espanhol de Portugal me tivesse
     tratado assim em vez de se retirar estrategicamente para o Brasil eu n\xE3o teria
