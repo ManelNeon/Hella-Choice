@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5279151949433129060}
   - component: {fileID: 4276783291376260050}
   m_Layer: 0
-  m_Name: NPC Napoleon
+  m_Name: NPC Napoleao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,27 +45,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - Hey. I'm Lovecraft... I am a product of my time so I will not say in here what
-    I truly believe about "different" people.
-  - You're complimenting me? Please, treat yourself, I know how I look.
+  - "D\u2019onde vim parar? Terras quentes como o Equador? Falei  cornudo, o da barca
+    enganou-me a mim? Disse ele que velejava com paragem no pante\xE3o.\u201D"
+  - as
   - Being polite to me? I hate you.
   - Uh... So you see I seem to be bored by your presence. Cthulhu was a better representation
     of a god than you...
-  - Oh... Oh, please... Continue, Being rude to me... arouses me....
-  - YES YES, CLIMAX, PLEAAAAASE KEEP THAT ENERGY BABY.
-  - Ignoring me are you? Well not like I would speak to scum like you.
-  - You have bored me, please leave, I care not for you.
+  - "OH! COMO SE ATREVE. Acha que est\xE1\u2026 *Cof* N\xE3o me pode tratar assim\u2026
+    *Talvez at\xE9 possa\u2026* Continuando. Se o rei espanhol de Portugal me tivesse
+    tratado assim em vez de se retirar estrategicamente para o Brasil eu n\xE3o teria
+    invadido o pa\xEDs mais 2 vezes."
+  - "AH! SIM! POR FAVOR. CONTINUA ASSIM. LEMBRA ME QUANDO PEDIA A MARIA LU\xCDSA
+    PARA ME INSULTAR ASSIM. e bater-me\u2026"
+  - Como te atreves a ignorar a minha pessoa. Queres que te mande com uma baguete
+    nos cornos!
+  - "Seu ser desgra\xE7ado mandarei hordas de soldados at\xE9 \xE0 tua porta e a\xED
+    sabereis quem vem l\xE1 \u201CEl mui grandioso imperador de Fran\xE7a\u2026"
   isGoodPerson: 0
-  complimentLevel: 1
-  educatedLevel: 2
-  neutralLevel: 0
-  rudeLevel: -1
+  complimentLevel: 0
+  educatedLevel: 0
+  neutralLevel: 1
+  rudeLevel: 2
   insultLevel: -1
-  ignoreLevel: 1
-  wrathLevel: -1
-  lustLevel: 2
-  gluttonyLevel: 0
+  ignoreLevel: 3
+  wrathLevel: 3
+  lustLevel: 0
+  gluttonyLevel: -3
   greedLevel: 1
-  slothLevel: -3
-  envyLevel: -2
-  prideLevel: 3
+  slothLevel: -2
+  envyLevel: -1
+  prideLevel: 2
