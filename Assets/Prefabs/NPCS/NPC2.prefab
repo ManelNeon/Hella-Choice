@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: 
+  characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
   dialogues:
   - Hello its me Jesus Christ. I've been sent to the wrong place, please send me
     to the right place.

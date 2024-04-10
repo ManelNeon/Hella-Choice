@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4689662817764802334}
   - component: {fileID: 7582553018436783559}
   - component: {fileID: 4267827032740201701}
+  - component: {fileID: 1978234143883064882}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: Untagged
@@ -96,6 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: 
+  characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
   dialogues:
   - "Hey hey hey, it's a me Mario boyyyy\t"
   - Well thank you, you see I killed a lot of people, that's why I'm so pretty you
@@ -120,3 +123,24 @@ MonoBehaviour:
   slothLevel: 1
   envyLevel: 2
   prideLevel: 3
+--- !u!95 &1978234143883064882
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425775727080806319}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f983e5b43676a5b4792b88f2db395390, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

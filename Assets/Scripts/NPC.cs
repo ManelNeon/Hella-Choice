@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class NPC : NPCFather
 {
+    [Header("UI Layouts")]
     //the text mesh where we will put our dialogue
     [SerializeField] TextMeshProUGUI displayText;
+
+    [SerializeField] TextMeshProUGUI nameDisplayText;
 
     [Header("Text Speed")][SerializeField] float textSpeed;
 
@@ -46,6 +49,12 @@ public class NPC : NPCFather
 
     int stress;
 
+    Vector3 originalPosition = new Vector3(3.73999f, -5f, 0.43f);
+
+    [HideInInspector] public GameObject npcObject;
+
+    [HideInInspector] public Animator npcAnimator;
+
     private void Start()
     {
         buttonsHolder.SetActive(false);
@@ -71,7 +80,7 @@ public class NPC : NPCFather
     }
 
     // this is for when we start the dialogue
-    public void StartDialogue()
+    public IEnumerator StartDialogue()
     {
         stress = 0;
 
@@ -93,11 +102,23 @@ public class NPC : NPCFather
 
         GiveButtonsPurpose();
 
+        npcObject = Instantiate(characterModel, originalPosition, characterModel.transform.rotation);
+
+        npcAnimator = npcObject.GetComponent<Animator>();
+
+        nameDisplayText.text = characterName;
+
         //we put the display text to nothing
         displayText.text = "";
 
+        npcAnimator.Play("GoingUp");
+
+        yield return new WaitForSeconds(1);
+        
         //and we start the corotine for the writing of the text
         NextLine(0);
+
+        yield break;
     }
 
     //we write the text

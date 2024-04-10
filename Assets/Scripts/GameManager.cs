@@ -2,14 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [HideInInspector] public bool canPlayerSend;
+    public bool down;
+
+    bool firstNPC;
+
+    bool secondNPC;
 
     AudioSource audioSource;
+
+    [Header("Effects Related")]
+
+    [SerializeField] ParticleSystem hellParticles;
+
+    [SerializeField] ParticleSystem heavenParticles;
 
     [Header("NPC Related")]
 
@@ -18,13 +29,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject[] npcsPrefabs;
 
     [SerializeField] GameObject[] specialNPCPrefabs;
-
-    [Header("Tablet Related")]
-    [SerializeField] GameObject tablet;
-
-    [SerializeField] GameObject hellPart1;
-
-    [SerializeField] GameObject hellPart2;
 
     [Header("Hell Scores")]
     [SerializeField] TextMeshProUGUI wrathScoreText;
@@ -41,7 +45,16 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI prideScoreText;
 
+    [SerializeField] CanvasGroup scoreDisplay;
+
+    [SerializeField] TextMeshProUGUI scoreDisplayText;
+
+    [SerializeField] float fadeDuraction;
+
     [Header("Audio Related")]
+
+    [SerializeField] AudioClip sentSomewhereSound;
+
     [SerializeField] AudioClip notificationSound;
 
     int wrathHellScore;
@@ -58,9 +71,13 @@ public class GameManager : MonoBehaviour
 
     int prideHellScore;
 
+    int randomNumber = -1;
+
     // Start is called before the first frame update
     void Start()
     {
+        firstNPC = true;
+
         if (Instance != null)
         {
             Destroy(this.gameObject);
@@ -73,12 +90,19 @@ public class GameManager : MonoBehaviour
 
         ChangeNPC();
 
-        npcHolder.StartDialogue();
+        npcHolder.StartCoroutine(npcHolder.StartDialogue());
+
+        scoreDisplay.alpha = 0;
     }
 
     void ChangeNPC()
     {
-        int randomNumber = Random.Range(0, npcsPrefabs.Length);
+        int previousNumber = randomNumber;
+
+        while (previousNumber == randomNumber)
+        {
+            randomNumber = Random.Range(0, npcsPrefabs.Length);
+        }
 
         NPCFather currentNPC = npcsPrefabs[randomNumber].GetComponent<NPCFather>();
 
@@ -113,26 +137,12 @@ public class GameManager : MonoBehaviour
         npcHolder.prideLevel = currentNPC.prideLevel;
 
         npcHolder.characterName = currentNPC.characterName;
+
+        npcHolder.characterModel = currentNPC.characterModel;
     }
 
-    public void TabletOpenAndClose()
+    public void ChangeHellScore()
     {
-        if (tablet.activeInHierarchy)
-        {
-            tablet.SetActive(false);
-            hellPart1.SetActive(true);
-            hellPart2.SetActive(false);
-        }
-        else
-        {
-            tablet.SetActive(true);
-        }
-    }
-
-    public void OpenHellChoices()
-    {
-        hellPart1.SetActive(false);
-
         wrathScoreText.text = wrathHellScore.ToString();
 
         lustScoreText.text = lustHellScore.ToString();
@@ -146,8 +156,6 @@ public class GameManager : MonoBehaviour
         envyScoreText.text = envyHellScore.ToString();
 
         prideScoreText.text = prideHellScore.ToString();
-
-        hellPart2.SetActive(true);
     }
 
     public void SendToHeaven(bool isGoodPerson, int hellScore)
@@ -168,8 +176,10 @@ public class GameManager : MonoBehaviour
 
             prideHellScore += hellScore;
         }
-        else 
+        else
         {
+            hellScore = -1;
+
             wrathHellScore -= 1;
 
             lustHellScore -= 1;
@@ -185,92 +195,202 @@ public class GameManager : MonoBehaviour
             prideHellScore -= 1;
         }
 
-        StartCoroutine(SendNPCAway());
+        if (scoreDisplay.alpha != 0)
+        {
+            StopAllCoroutines();
+        }
 
+        StartCoroutine(ScoreNotification(true, hellScore, ""));
+
+        StartCoroutine(SendNPCAway(false));
     }
 
     public void SendToWrath(int hellScore)
     {
         wrathHellScore += hellScore;
 
-        StartCoroutine(SendNPCAway());
+        if (scoreDisplay.alpha != 0)
+        {
+            StopAllCoroutines();
+        }
 
+        StartCoroutine(ScoreNotification(false, hellScore, "Ira"));
+
+        StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToLust(int hellScore)
     {
-        lustHellScore+= hellScore;
+        lustHellScore += hellScore;
 
-        StartCoroutine(SendNPCAway());
+        if (scoreDisplay.alpha != 0)
+        {
+            StopAllCoroutines();
+        }
 
+        StartCoroutine(ScoreNotification(false, hellScore, "Luxúria"));
+
+        StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToGluttony(int hellScore)
     {
-        gluttonyHellScore+= hellScore;
+        gluttonyHellScore += hellScore;
 
-        StartCoroutine(SendNPCAway());
+        if (scoreDisplay.alpha != 0)
+        {
+            StopAllCoroutines();
+        }
 
+        StartCoroutine(ScoreNotification(false, hellScore, "Gula"));
+
+        StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToGreed(int hellScore)
     {
-        greedHellScore+= hellScore;
+        greedHellScore += hellScore;
 
-        StartCoroutine(SendNPCAway());
+        if (scoreDisplay.alpha != 0)
+        {
+            StopAllCoroutines();
+        }
 
+        StartCoroutine(ScoreNotification(false, hellScore, "Ganância"));
+
+        StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToSloth(int hellScore)
     {
-        slothHellScore+= hellScore;
+        slothHellScore += hellScore;
 
-        StartCoroutine(SendNPCAway());
+        if (scoreDisplay.alpha != 0)
+        {
+            StopAllCoroutines();
+        }
 
+        StartCoroutine(ScoreNotification(false, hellScore, "Preguiça"));
+
+        StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToEnvy(int hellScore)
     {
         envyHellScore += hellScore;
 
-        StartCoroutine(SendNPCAway());
+        if (scoreDisplay.alpha != 0)
+        {
+            StopAllCoroutines();
+        }
 
+        StartCoroutine(ScoreNotification(false, hellScore, "Inveja"));
+
+        StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToPride(int hellScore)
     {
-        prideHellScore+= hellScore;
+        prideHellScore += hellScore;
 
-        StartCoroutine(SendNPCAway());
+        if (scoreDisplay.alpha != 0)
+        {
+            StopAllCoroutines();
+        }
+
+        StartCoroutine(ScoreNotification(false, hellScore, "Orgulho"));
+
+        StartCoroutine(SendNPCAway(true));
     }
 
-    IEnumerator SendNPCAway()
+    IEnumerator SendNPCAway(bool isHell)
     {
+        Camera.main.GetComponent<Animator>().Play("GoingBack");
+
+        ChangeHellScore();
+
+        down = false;
+
+        yield return new WaitForSeconds(.7f);
+
         npcHolder.TakeButtonsPurpose();
 
-        audioSource.PlayOneShot(notificationSound);
-
-        canPlayerSend = false;
-
-        TabletOpenAndClose();
-
-        //Play Animation Here, then we open the tablet again, we show the player how hell has changed and we send the new NPC
-
-        yield return new WaitForSeconds(1.5f);
-
-        TabletOpenAndClose();
-
-        OpenHellChoices();
+        if (isHell)
+        {
+            npcHolder.npcAnimator.Play("GoingLeft");
+        }
+        else
+        {
+            npcHolder.npcAnimator.Play("GoingRight");
+        }
 
         yield return new WaitForSeconds(1.5f);
 
-        TabletOpenAndClose();
+        if (isHell)
+        {
+            hellParticles.Play();
+        }
+        else
+        {
+            heavenParticles.Play();
+        }
 
-        canPlayerSend = true;
+        audioSource.PlayOneShot(sentSomewhereSound);
+
+        yield return new WaitForSeconds(1.5f);
 
         ChangeNPC();
 
-        npcHolder.StartDialogue();
+        Destroy(npcHolder.npcObject);
+
+        npcHolder.StartCoroutine(npcHolder.StartDialogue());
+
+        yield break;
+    }
+
+    IEnumerator ScoreNotification(bool multiplePoints, int hellScore, string hellName)
+    {
+        audioSource.PlayOneShot(notificationSound);
+
+        bool doesGivePoint;
+
+        if (hellScore <= 0)
+        {
+            doesGivePoint = false;
+        }
+        else
+        {
+            doesGivePoint = true;
+        }
+
+        if (!multiplePoints)
+        {
+            if (doesGivePoint)
+            {
+                scoreDisplayText.text = " + " + hellScore + " em " + hellName;
+            }
+            if (!doesGivePoint)
+            {
+                scoreDisplayText.text = " " + hellScore + " em " + hellName;
+            }
+        }
+        if (multiplePoints)
+        {
+            if (doesGivePoint)
+            {
+                scoreDisplayText.text = " + " + hellScore + " em todos os infernos!";
+            }
+            if (!doesGivePoint)
+            {
+                scoreDisplayText.text = " " + hellScore + " em todos os infernos...";
+            }
+        }
+
+        scoreDisplay.alpha = 1;
+
+        yield return new WaitForSeconds(fadeDuraction);
+
+        scoreDisplay.alpha = 0;
 
         yield break;
     }

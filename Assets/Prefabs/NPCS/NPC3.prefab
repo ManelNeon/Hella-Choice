@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: 
+  characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
   dialogues:
   - Hey. I'm Lovecraft... I am a product of my time so I will not say in here what
     I truly believe about "different" people.
