@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public bool down;
+    [SerializeField] GameObject firstTutorialUI;
+
+    [SerializeField] GameObject secondTutorialUI;
+
+    [HideInInspector] public bool down;
 
     bool firstNPC;
 
@@ -26,11 +31,18 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] NPC npcHolder;
 
+    [SerializeField] GameObject firstNPCPrefab;
+
+    [SerializeField] GameObject secondNPCPrefab;
+
     [SerializeField] GameObject[] npcsPrefabs;
 
     [SerializeField] GameObject[] specialNPCPrefabs;
 
     [Header("Hell Scores")]
+
+    [SerializeField] GameObject heavenButton;
+
     [SerializeField] TextMeshProUGUI wrathScoreText;
 
     [SerializeField] TextMeshProUGUI lustScoreText;
@@ -53,9 +65,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Audio Related")]
 
-    [SerializeField] AudioClip sentSomewhereSound;
-
     [SerializeField] AudioClip notificationSound;
+
+    [SerializeField] AudioClip clickSound;
 
     int wrathHellScore;
 
@@ -73,9 +85,30 @@ public class GameManager : MonoBehaviour
 
     int randomNumber = -1;
 
+    public void CloseTutorial(bool isOne)
+    {
+        if (isOne)
+        {
+            firstTutorialUI.SetActive(false);
+        }
+        else
+        {
+            secondTutorialUI.SetActive(false);
+        }
+
+        Time.timeScale = 1;
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        heavenButton.SetActive(true);
+
         firstNPC = true;
 
         if (Instance != null)
@@ -97,14 +130,35 @@ public class GameManager : MonoBehaviour
 
     void ChangeNPC()
     {
-        int previousNumber = randomNumber;
+        NPCFather currentNPC = firstNPCPrefab.GetComponent<NPCFather>();
 
-        while (previousNumber == randomNumber)
+        if (!firstNPC && !secondNPC)
         {
-            randomNumber = Random.Range(0, npcsPrefabs.Length);
-        }
+            int previousNumber = randomNumber;
 
-        NPCFather currentNPC = npcsPrefabs[randomNumber].GetComponent<NPCFather>();
+            while (previousNumber == randomNumber)
+            {
+                randomNumber = Random.Range(0, npcsPrefabs.Length);
+            }
+
+            currentNPC = npcsPrefabs[randomNumber].GetComponent<NPCFather>();
+        }
+        else if (firstNPC)
+        {
+            currentNPC = firstNPCPrefab.GetComponent<NPCFather>();
+
+            firstTutorialUI.SetActive(true);
+
+            Time.timeScale = 0;
+        }
+        else if (secondNPC)
+        {
+            currentNPC = secondNPCPrefab.GetComponent<NPCFather>();
+
+            secondTutorialUI.SetActive(true);
+
+            Time.timeScale = 0;
+        }
 
         npcHolder.isGoodPerson = currentNPC.isGoodPerson;
 
@@ -207,6 +261,11 @@ public class GameManager : MonoBehaviour
 
     public void SendToWrath(int hellScore)
     {
+        if (npcHolder.isGoodPerson)
+        {
+            hellScore = -hellScore;
+        }
+
         wrathHellScore += hellScore;
 
         if (scoreDisplay.alpha != 0)
@@ -214,27 +273,51 @@ public class GameManager : MonoBehaviour
             StopAllCoroutines();
         }
 
-        StartCoroutine(ScoreNotification(false, hellScore, "Ira"));
+        if (LanguageManager.Instance.isPortuguese)
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Ira"));
+        }
+        else
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Wrath"));
+        }
 
         StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToLust(int hellScore)
     {
-        lustHellScore += hellScore;
+        if (npcHolder.isGoodPerson)
+        {
+            hellScore = -hellScore;
+        }
 
+        lustHellScore += hellScore;
+        
         if (scoreDisplay.alpha != 0)
         {
             StopAllCoroutines();
         }
 
-        StartCoroutine(ScoreNotification(false, hellScore, "Luxúria"));
+        if (LanguageManager.Instance.isPortuguese)
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Luxúria"));
+        }
+        else
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Lust"));
+        }
 
         StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToGluttony(int hellScore)
     {
+        if (npcHolder.isGoodPerson)
+        {
+            hellScore = -hellScore;
+        }
+
         gluttonyHellScore += hellScore;
 
         if (scoreDisplay.alpha != 0)
@@ -242,13 +325,25 @@ public class GameManager : MonoBehaviour
             StopAllCoroutines();
         }
 
-        StartCoroutine(ScoreNotification(false, hellScore, "Gula"));
+        if (LanguageManager.Instance.isPortuguese)
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Gula"));
+        }
+        else
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Gluttony"));
+        }
 
         StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToGreed(int hellScore)
     {
+        if (npcHolder.isGoodPerson)
+        {
+            hellScore = -hellScore;
+        }
+
         greedHellScore += hellScore;
 
         if (scoreDisplay.alpha != 0)
@@ -256,13 +351,25 @@ public class GameManager : MonoBehaviour
             StopAllCoroutines();
         }
 
-        StartCoroutine(ScoreNotification(false, hellScore, "Ganância"));
+        if (LanguageManager.Instance.isPortuguese)
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Ganância"));
+        }
+        else
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Greed"));
+        }
 
         StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToSloth(int hellScore)
     {
+        if (npcHolder.isGoodPerson)
+        {
+            hellScore = -hellScore;
+        }
+
         slothHellScore += hellScore;
 
         if (scoreDisplay.alpha != 0)
@@ -270,13 +377,25 @@ public class GameManager : MonoBehaviour
             StopAllCoroutines();
         }
 
-        StartCoroutine(ScoreNotification(false, hellScore, "Preguiça"));
+        if (LanguageManager.Instance.isPortuguese)
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Preguiça"));
+        }
+        else
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Sloth"));
+        }
 
         StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToEnvy(int hellScore)
     {
+        if (npcHolder.isGoodPerson)
+        {
+            hellScore = -hellScore;
+        }
+
         envyHellScore += hellScore;
 
         if (scoreDisplay.alpha != 0)
@@ -284,13 +403,25 @@ public class GameManager : MonoBehaviour
             StopAllCoroutines();
         }
 
-        StartCoroutine(ScoreNotification(false, hellScore, "Inveja"));
+        if (LanguageManager.Instance.isPortuguese)
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Inveja"));
+        }
+        else
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Envy"));
+        }
 
         StartCoroutine(SendNPCAway(true));
     }
 
     public void SendToPride(int hellScore)
     {
+        if (npcHolder.isGoodPerson)
+        {
+            hellScore = -hellScore;
+        }
+
         prideHellScore += hellScore;
 
         if (scoreDisplay.alpha != 0)
@@ -298,13 +429,33 @@ public class GameManager : MonoBehaviour
             StopAllCoroutines();
         }
 
-        StartCoroutine(ScoreNotification(false, hellScore, "Orgulho"));
+        if (LanguageManager.Instance.isPortuguese)
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Orgulho"));
+        }
+        else
+        {
+            StartCoroutine(ScoreNotification(false, hellScore, "Pride"));
+        }
 
         StartCoroutine(SendNPCAway(true));
     }
 
     IEnumerator SendNPCAway(bool isHell)
     {
+        if (firstNPC)
+        {
+            firstNPC = false;
+            secondNPC = true;
+        }
+        else if (secondNPC)
+        {
+            secondNPC = false;
+        }
+
+
+        audioSource.PlayOneShot(clickSound);
+
         Camera.main.GetComponent<Animator>().Play("GoingBack");
 
         ChangeHellScore();
@@ -335,8 +486,6 @@ public class GameManager : MonoBehaviour
             heavenParticles.Play();
         }
 
-        audioSource.PlayOneShot(sentSomewhereSound);
-
         yield return new WaitForSeconds(1.5f);
 
         ChangeNPC();
@@ -350,6 +499,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ScoreNotification(bool multiplePoints, int hellScore, string hellName)
     {
+        yield return new WaitForSeconds(2.2f);
+
         audioSource.PlayOneShot(notificationSound);
 
         bool doesGivePoint;
@@ -363,28 +514,57 @@ public class GameManager : MonoBehaviour
             doesGivePoint = true;
         }
 
-        if (!multiplePoints)
+        if (LanguageManager.Instance.isPortuguese)
         {
-            if (doesGivePoint)
+            if (!multiplePoints)
             {
-                scoreDisplayText.text = " + " + hellScore + " em " + hellName;
+                if (doesGivePoint)
+                {
+                    scoreDisplayText.text = " + " + hellScore + " em " + hellName;
+                }
+                if (!doesGivePoint)
+                {
+                    scoreDisplayText.text = " " + hellScore + " em " + hellName;
+                }
             }
-            if (!doesGivePoint)
+            if (multiplePoints)
             {
-                scoreDisplayText.text = " " + hellScore + " em " + hellName;
+                if (doesGivePoint)
+                {
+                    scoreDisplayText.text = " + " + hellScore + " em todos os infernos!";
+                }
+                if (!doesGivePoint)
+                {
+                    scoreDisplayText.text = " " + hellScore + " em todos os infernos...";
+                }
             }
         }
-        if (multiplePoints)
+        else
         {
-            if (doesGivePoint)
+            if (!multiplePoints)
             {
-                scoreDisplayText.text = " + " + hellScore + " em todos os infernos!";
+                if (doesGivePoint)
+                {
+                    scoreDisplayText.text = " + " + hellScore + " in " + hellName;
+                }
+                if (!doesGivePoint)
+                {
+                    scoreDisplayText.text = " " + hellScore + " in " + hellName;
+                }
             }
-            if (!doesGivePoint)
+            if (multiplePoints)
             {
-                scoreDisplayText.text = " " + hellScore + " em todos os infernos...";
+                if (doesGivePoint)
+                {
+                    scoreDisplayText.text = " + " + hellScore + " in all Circles of Hell!";
+                }
+                if (!doesGivePoint)
+                {
+                    scoreDisplayText.text = " " + hellScore + " in all Circles of Hell...";
+                }
             }
         }
+        
 
         scoreDisplay.alpha = 1;
 

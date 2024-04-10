@@ -63,7 +63,7 @@ public class NPC : NPCFather
     public void Update()
     {
         //if the player clicks on the left mouse
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.timeScale == 1)
         {
             //if the dialogue text is the same as the one on the UI
             if (displayText.text != dialogues[index])
