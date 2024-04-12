@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4267827032740201701}
   - component: {fileID: 1978234143883064882}
   m_Layer: 0
-  m_Name: NPC1
+  m_Name: NPC1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,31 +97,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: 
+  characterName: H.P. MineLovecraft
   characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
   dialogues:
-  - "Hey hey hey, it's a me Mario boyyyy\t"
-  - Well thank you, you see I killed a lot of people, that's why I'm so pretty you
-    see.
-  - Well well aren't you educated. I used to play a lot with folks like you...
-  - Ahahaha hello there scentient god of death, I shall prais you and do your bidding.
-  - AREN'T YOU RUDE..... I like it eheheh
-  - welll... you're stupid aren't you?
-  - "YOU DARE IGNORE ME? STOP IGNORING ME!!!\t"
-  - You bored me, I won't speak to you any longer.
+  - "Ol\xE1, ser berrante. Sabe dizer-me onde nos encontramos? \xC9 muito parecido
+    com algumas descri\xE7\xF5es dos meus livros. T\xE3o realista que come\xE7o a
+    achar que \xE9 verdade."
+  - "YAWN! N\xE3o digas algo assim do nada que eu fico sem jeito, mas obrigado. Vejo
+    que sabes distinguir pessoas requintadas."
+  - "Que requinte na fala que o senhor tem. Um dia deveria passar pelo nosso clube.
+    Gostamos de educar seres menos evolu\xEDdos que n\xF3s por l\xE1."
+  - "Ent\xE3o e conhece os meus livros? S\xE3o muito bons. H\xE1 quem me chame de
+    alguns nomes negativos porque eu gosto de separar seres por cores de pele, mas
+    eles n\xE3o sabem do que digo. Sou uma pessoa \xE0 frente do meu tempo."
+  - "Ser rude comigo, n\xE3o o leva a lado nenhum. Ali\xE1s, n\xE3o ganha nada vindo
+    de mim assim. O que vem de baixo n\xE3o me atinge. *beijo no ar*"
+  - "Quem \xE9s tu para me insultar? N\xE3o preciso continuar a perder tempo contigo
+    aqui\u2026"
+  - "Seu racista\u2026"
+  - "Tu n\xE3o percebes o qu\xE3o magnifico \xE9 falar como algu\xE9m como eu, n\xE3o
+    vale a pena sequer perder o meu tempo consigo."
   isGoodPerson: 0
-  complimentLevel: -1
-  educatedLevel: 0
-  neutralLevel: 1
-  rudeLevel: -1
-  insultLevel: 2
+  complimentLevel: -2
+  educatedLevel: -1
+  neutralLevel: 0
+  rudeLevel: 2
+  insultLevel: 3
   ignoreLevel: 3
-  wrathLevel: -3
-  lustLevel: -2
-  gluttonyLevel: -1
+  wrathLevel: 2
+  lustLevel: 1
+  gluttonyLevel: -3
   greedLevel: 0
-  slothLevel: 1
-  envyLevel: 2
+  slothLevel: -2
+  envyLevel: -1
   prideLevel: 3
 --- !u!95 &1978234143883064882
 Animator:
