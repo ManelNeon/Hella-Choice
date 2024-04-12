@@ -1700,10 +1700,11 @@ MonoBehaviour:
   npcHolder: {fileID: 1482359708}
   firstNPCPrefab: {fileID: 4425775727080806319, guid: c4ee0d7571539b14f951de4f2c8b688b, type: 3}
   secondNPCPrefab: {fileID: 4425775727080806319, guid: 9fb2eeda9cce5224489e0e476533d347, type: 3}
-  npcsPrefabs:
-  - {fileID: 6419578826053471020, guid: e3b6b0e733b34bf48987df228eb916b2, type: 3}
+  npcsPrefabs: []
   specialNPCPrefabs:
   - {fileID: 6419578826053471020, guid: e3b6b0e733b34bf48987df228eb916b2, type: 3}
+  - {fileID: 6419578826053471020, guid: be725befe5f56a543a3bace8930e2aef, type: 3}
+  - {fileID: 6419578826053471020, guid: c4c5d85c91ae3fa44ad6b19b745398f3, type: 3}
   heavenButton: {fileID: 1969281709}
   wrathScoreText: {fileID: 1737601125}
   lustScoreText: {fileID: 753531155}
