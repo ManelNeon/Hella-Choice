@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4267827032740201701}
   - component: {fileID: 1978234143883064882}
   m_Layer: 0
-  m_Name: NPC1 3
+  m_Name: NPC1 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,36 +97,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: Cristiano Ronaldo
+  characterName: "Adolfo de Su\xE9cia"
   characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
   dialogues:
-  - "Ent\xE3o o meu fim chegou. Chegou o momento de me tornar uma lenda. Queres fazer
-    um toques comigo?"
-  - "\xC9 isso mesmo SOU LINDOOOOOOO, SIIIIMMMMMMMMMMMMMM."
-  - Para onde quer que me mandes sei que vou ser o maior. SOU LINDOOOO, SIMMMMM
-  - "Sabes como \xE9 que \xE9, n\xE3o gosto mesmo nada de quem bebe coca-cola. Isso
-    faz mal \xE0 sa\xFAde. N\xE3o podes ser LINDOOOO COMO EUUUUUU. SOU LINDOOOOO
-    SIMMMMM. \xC1gua."
-  - "J\xE1 vi que n\xE3o \xE9s f\xE3 de futebol. Devias ir ao meu museu no arquip\xE9lago
-    da Madeira. Ias logo come\xE7ar a gostar."
-  - Pelo menos tenho mais bolas de ouro que tu! EEEHHH! SIMMMMM! SOU LINDOOO! SIMMMMMMMMM!!!!
-  - SOU LINDOOOOO!
-  - "J\xE1 n\xE3o me importo para onde me mandas. PORQUE EU SOU LINDOOOOOOOOOOOOOOOOOOOOOOOOOO.
-    LINDO, LINDO, LINDO. TODOS OS REL\xC1TOS SOBRE MIM S\xC3O LINDOOOOOOOS. LINDOOOOOO."
+  - Bem, bem, bem, mas onde estou? Ainda agora estava eu a deleitar-me num valente
+    banquete, mas agora estou aqui.
+  - "Awn, mas aquela lagosta estava t\xE3o boa\u2026"
+  - Aquele caviar. SOBERBO!
+  - "Os fluidos do chucrute espalhavam-se na minha boca com um toque que s\xF3 o
+    divino tem."
+  - O arenque fumado daquele banquete era fresquinho acabado de sair da pesca.
+  - "Ainda agora o tomei e j\xE1 come\xE7o a sentir saudades daqueles borbulhante
+    champagne."
+  - Ai! E as sobremesas ao final, confecionadas por anjos de certeza!
+  - "Espero que ainda tenha sobrado algo daquele banquete\u2026"
   isGoodPerson: 0
-  complimentLevel: -2
-  educatedLevel: -1
+  complimentLevel: 0
+  educatedLevel: 0
   neutralLevel: 0
-  rudeLevel: 1
-  insultLevel: 1
-  ignoreLevel: 1
-  wrathLevel: 1
-  lustLevel: 3
-  gluttonyLevel: -2
-  greedLevel: -1
-  slothLevel: -3
-  envyLevel: 0
-  prideLevel: 2
+  rudeLevel: -1
+  insultLevel: -1
+  ignoreLevel: -1
+  wrathLevel: -3
+  lustLevel: 1
+  gluttonyLevel: 3
+  greedLevel: -2
+  slothLevel: 2
+  envyLevel: -1
+  prideLevel: 0
 --- !u!95 &1978234143883064882
 Animator:
   serializedVersion: 5

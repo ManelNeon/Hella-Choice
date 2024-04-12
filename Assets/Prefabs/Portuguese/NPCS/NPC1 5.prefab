@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4267827032740201701}
   - component: {fileID: 1978234143883064882}
   m_Layer: 0
-  m_Name: NPC1 3
+  m_Name: NPC1 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,36 +97,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: Cristiano Ronaldo
+  characterName: D. Afonso Henriques
   characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
   dialogues:
-  - "Ent\xE3o o meu fim chegou. Chegou o momento de me tornar uma lenda. Queres fazer
-    um toques comigo?"
-  - "\xC9 isso mesmo SOU LINDOOOOOOO, SIIIIMMMMMMMMMMMMMM."
-  - Para onde quer que me mandes sei que vou ser o maior. SOU LINDOOOO, SIMMMMM
-  - "Sabes como \xE9 que \xE9, n\xE3o gosto mesmo nada de quem bebe coca-cola. Isso
-    faz mal \xE0 sa\xFAde. N\xE3o podes ser LINDOOOO COMO EUUUUUU. SOU LINDOOOOO
-    SIMMMMM. \xC1gua."
-  - "J\xE1 vi que n\xE3o \xE9s f\xE3 de futebol. Devias ir ao meu museu no arquip\xE9lago
-    da Madeira. Ias logo come\xE7ar a gostar."
-  - Pelo menos tenho mais bolas de ouro que tu! EEEHHH! SIMMMMM! SOU LINDOOO! SIMMMMMMMMM!!!!
-  - SOU LINDOOOOO!
-  - "J\xE1 n\xE3o me importo para onde me mandas. PORQUE EU SOU LINDOOOOOOOOOOOOOOOOOOOOOOOOOO.
-    LINDO, LINDO, LINDO. TODOS OS REL\xC1TOS SOBRE MIM S\xC3O LINDOOOOOOOS. LINDOOOOOO."
-  isGoodPerson: 0
+  - "Maldito aquele cavalo que me mandou ao ch\xE3o, nunca mais pude castigar os
+    Mouros em nome de Deus e da luz sagrada."
+  - "A minha for\xE7a vem do Pai de todos l\xE1 do c\xE9u, se os seus elogios t\xEAm
+    de ser direcionados a eles, creio que devam ser a ele."
+  - "Gostaria de encontrar meu pai depois destes anos todos, contar-lhe sobre como
+    conquistei o seu sonho. E tamb\xE9m confessar-me pelo que fiz a minha m\xE3e."
+  - "Sabe-me dizer para onde foi para meu pai? D. Henrique de Borgonha. Ele tamb\xE9m
+    foi um grande cavaleiro que lutava pela cruz de cristo pela reconquista das terras
+    perdidas em Lusit\xE2nia."
+  - Pensei que fosse um ser respeitoso por estar deste lado da vida, mas afinal enganei-me.
+  - "Insultai-me por que raz\xE3o? Tenta incitar o meu \xF3dio por raz\xF5es f\xFAteis?
+    Bem o padre dizia que os seres do abismo nos tentam \xE0 maldade. Levanto apenas
+    a minha espada em dire\xE7\xE3o a mouros e \xE0queles que amea\xE7am a exist\xEAncia
+    de Portugal."
+  - "N\xE3o me ignore por favor. Apenas quero prosseguir para o lado de l\xE1 destinado
+    por Deus."
+  - "Espero que os Portugueses de hoje em dia estejam em paz e a cuidarem deles mesmos
+    e dos pr\xF3ximos."
+  isGoodPerson: 1
   complimentLevel: -2
-  educatedLevel: -1
+  educatedLevel: -2
   neutralLevel: 0
   rudeLevel: 1
-  insultLevel: 1
-  ignoreLevel: 1
-  wrathLevel: 1
-  lustLevel: 3
-  gluttonyLevel: -2
-  greedLevel: -1
-  slothLevel: -3
-  envyLevel: 0
-  prideLevel: 2
+  insultLevel: 3
+  ignoreLevel: 2
+  wrathLevel: 2
+  lustLevel: -3
+  gluttonyLevel: 0
+  greedLevel: 3
+  slothLevel: -2
+  envyLevel: -1
+  prideLevel: 1
 --- !u!95 &1978234143883064882
 Animator:
   serializedVersion: 5

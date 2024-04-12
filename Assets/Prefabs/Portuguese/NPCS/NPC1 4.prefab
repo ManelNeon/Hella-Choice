@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4267827032740201701}
   - component: {fileID: 1978234143883064882}
   m_Layer: 0
-  m_Name: NPC1 3
+  m_Name: NPC1 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,36 +97,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: Cristiano Ronaldo
+  characterName: Padeira de Aljubarrota
   characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
   dialogues:
-  - "Ent\xE3o o meu fim chegou. Chegou o momento de me tornar uma lenda. Queres fazer
-    um toques comigo?"
-  - "\xC9 isso mesmo SOU LINDOOOOOOO, SIIIIMMMMMMMMMMMMMM."
-  - Para onde quer que me mandes sei que vou ser o maior. SOU LINDOOOO, SIMMMMM
-  - "Sabes como \xE9 que \xE9, n\xE3o gosto mesmo nada de quem bebe coca-cola. Isso
-    faz mal \xE0 sa\xFAde. N\xE3o podes ser LINDOOOO COMO EUUUUUU. SOU LINDOOOOO
-    SIMMMMM. \xC1gua."
-  - "J\xE1 vi que n\xE3o \xE9s f\xE3 de futebol. Devias ir ao meu museu no arquip\xE9lago
-    da Madeira. Ias logo come\xE7ar a gostar."
-  - Pelo menos tenho mais bolas de ouro que tu! EEEHHH! SIMMMMM! SOU LINDOOO! SIMMMMMMMMM!!!!
-  - SOU LINDOOOOO!
-  - "J\xE1 n\xE3o me importo para onde me mandas. PORQUE EU SOU LINDOOOOOOOOOOOOOOOOOOOOOOOOOO.
-    LINDO, LINDO, LINDO. TODOS OS REL\xC1TOS SOBRE MIM S\xC3O LINDOOOOOOOS. LINDOOOOOO."
+  - "Onde est\xE3o os Castelhanos? Estou com falta de enchido para as minhas bolas."
+  - "Sim, sim! Esta t\xE9cnica de balan\xE7ar a p\xE1 do p\xE3o foi lapidada ao longo
+    dos anos dentro da minha fam\xEDlia. J\xE1 s\xE3o muitos anos a dar pau aos Castelhanos."
+  - "N\xE3o luto por deus, apenas pelas minhas terras e pelo meu p\xE3o. N\xE3o h\xE1
+    vaca que tussa na minha seara sem ter medo de mim. N\xE3o h\xE1 castelhano que
+    pise nas terras do lado de c\xE1 que n\xE3o levem uma chapada de 6 dedos."
+  - "Por acaso no outro dia ainda me disseram para doar um pouco de gr\xE3o aos santos,
+    mas pensei que seria melhor o guardar caso sofr\xEAssemos outra invas\xE3o e
+    tivesse que sobreviver a outro cerco."
+  - "Falais mal como se amassasses p\xE3o na mesma padaria que eu. N\xE3o o tolero.
+    N\xE3o vou deixar que roubes as nossas terras demo!"
+  - "AI! Deixe-me encontrar um forno para aquecer a p\xE1 a ver se n\xE3o se arrepende
+    do que me chamas. Esse par de cornos serve-lhe bem."
+  - "N\xE3o percebe o meu linguajar? Deve ser um d\u2019os de Castela, devo assentar-lhe
+    a p\xE1 para me fazer entender?"
+  - "Tenho de voltar \xE0 minha padaria, s\xF3 Deus sabe quantos p\xE3es j\xE1 os
+    gaiatos me levaram a fiado."
   isGoodPerson: 0
   complimentLevel: -2
-  educatedLevel: -1
+  educatedLevel: -2
   neutralLevel: 0
   rudeLevel: 1
-  insultLevel: 1
-  ignoreLevel: 1
-  wrathLevel: 1
-  lustLevel: 3
-  gluttonyLevel: -2
-  greedLevel: -1
-  slothLevel: -3
-  envyLevel: 0
-  prideLevel: 2
+  insultLevel: 3
+  ignoreLevel: 2
+  wrathLevel: 2
+  lustLevel: -3
+  gluttonyLevel: 0
+  greedLevel: 3
+  slothLevel: -2
+  envyLevel: -1
+  prideLevel: 1
 --- !u!95 &1978234143883064882
 Animator:
   serializedVersion: 5

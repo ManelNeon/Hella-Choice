@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4267827032740201701}
   - component: {fileID: 1978234143883064882}
   m_Layer: 0
-  m_Name: NPC1 3
+  m_Name: NPC1 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,36 +97,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: Cristiano Ronaldo
+  characterName: Artur
   characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
   dialogues:
-  - "Ent\xE3o o meu fim chegou. Chegou o momento de me tornar uma lenda. Queres fazer
-    um toques comigo?"
-  - "\xC9 isso mesmo SOU LINDOOOOOOO, SIIIIMMMMMMMMMMMMMM."
-  - Para onde quer que me mandes sei que vou ser o maior. SOU LINDOOOO, SIMMMMM
-  - "Sabes como \xE9 que \xE9, n\xE3o gosto mesmo nada de quem bebe coca-cola. Isso
-    faz mal \xE0 sa\xFAde. N\xE3o podes ser LINDOOOO COMO EUUUUUU. SOU LINDOOOOO
-    SIMMMMM. \xC1gua."
-  - "J\xE1 vi que n\xE3o \xE9s f\xE3 de futebol. Devias ir ao meu museu no arquip\xE9lago
-    da Madeira. Ias logo come\xE7ar a gostar."
-  - Pelo menos tenho mais bolas de ouro que tu! EEEHHH! SIMMMMM! SOU LINDOOO! SIMMMMMMMMM!!!!
-  - SOU LINDOOOOO!
-  - "J\xE1 n\xE3o me importo para onde me mandas. PORQUE EU SOU LINDOOOOOOOOOOOOOOOOOOOOOOOOOO.
-    LINDO, LINDO, LINDO. TODOS OS REL\xC1TOS SOBRE MIM S\xC3O LINDOOOOOOOS. LINDOOOOOO."
+  - "Onde estou? Aquele desgra\xE7ado do meu irm\xE3o. Para onde \xE9 que ele me
+    mandou?"
+  - "\xC9 a primeira vez que algu\xE9m me elogia. A \xFAnica coisa que ouvi a vida
+    toda eram insultos do desgra\xE7ado do meu irm\xE3o. \u201CE arranjar emprego
+    seu verme.\u201D \u201CE fazeres alguma coisa sua sangue suga.\u201D"
+  - "O meu irm\xE3o fazia-me a vida negra por n\xE3o trabalhar. Ele acha que \xE9
+    f\xE1cil de arranjar um emprego com condi\xE7\xF5es, atualmente."
+  - "Tem a\xED algum banquinho por a\xED para eu tamb\xE9m me sentar? Se n\xE3o for
+    pedir muito."
+  - "Vamos l\xE1 ver como fala. N\xE3o h\xE1 necessidade de sermos desrespeitosos
+    um para o outro. J\xE1 basta o meu irm\xE3o ser assim neste mundo. S\xF3 porque
+    eu lhe pedia dinheiro todos os meses por n\xE3o ter emprego para pagar as contas."
+  - "EU N\xC3O SOU PREGUI\xC7OSO! PREGUI\xC7OSOS S\xC3O AQUELES QUE FICAM NAS ESPLANADAS
+    A ESTOIRAR DINHEIRO NA CERVEJA."
+  - "Est\xE1 a ouvir-me? Fa\xE7a o seu trabalho porra!"
+  - "O mundo est\xE1 todo contra mim. Eles acham todos que eu devo ser um incapaz,
+    mas \xE9 tudo culpa do universo que n\xE3o me d\xE1 as oportunidades."
   isGoodPerson: 0
-  complimentLevel: -2
-  educatedLevel: -1
-  neutralLevel: 0
+  complimentLevel: -1
+  educatedLevel: 1
+  neutralLevel: 1
   rudeLevel: 1
-  insultLevel: 1
+  insultLevel: 2
   ignoreLevel: 1
   wrathLevel: 1
-  lustLevel: 3
-  gluttonyLevel: -2
-  greedLevel: -1
-  slothLevel: -3
-  envyLevel: 0
-  prideLevel: 2
+  lustLevel: -2
+  gluttonyLevel: -1
+  greedLevel: 0
+  slothLevel: 3
+  envyLevel: 2
+  prideLevel: -3
 --- !u!95 &1978234143883064882
 Animator:
   serializedVersion: 5
