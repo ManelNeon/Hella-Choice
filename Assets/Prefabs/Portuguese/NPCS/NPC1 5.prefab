@@ -126,12 +126,12 @@ MonoBehaviour:
   insultLevel: 3
   ignoreLevel: 2
   wrathLevel: 2
-  lustLevel: -3
-  gluttonyLevel: 0
-  greedLevel: 3
-  slothLevel: -2
-  envyLevel: -1
-  prideLevel: 1
+  lustLevel: 2
+  gluttonyLevel: 2
+  greedLevel: 2
+  slothLevel: 2
+  envyLevel: 2
+  prideLevel: 2
 --- !u!95 &1978234143883064882
 Animator:
   serializedVersion: 5

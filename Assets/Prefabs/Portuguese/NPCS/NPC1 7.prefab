@@ -115,9 +115,9 @@ MonoBehaviour:
   complimentLevel: 0
   educatedLevel: 0
   neutralLevel: 0
-  rudeLevel: -1
-  insultLevel: -1
-  ignoreLevel: -1
+  rudeLevel: 1
+  insultLevel: 1
+  ignoreLevel: 1
   wrathLevel: -3
   lustLevel: 1
   gluttonyLevel: 3
