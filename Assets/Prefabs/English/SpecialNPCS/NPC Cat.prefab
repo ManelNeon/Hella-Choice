@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5279151949433129060}
   - component: {fileID: 4276783291376260050}
   m_Layer: 0
-  m_Name: "NPC Sebasti\xE3oEnglish"
+  m_Name: NPC Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,33 +44,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: "King Sebasti\xE3o"
-  characterModel: {fileID: 8908652267312540732, guid: 022fafbdcbeddea46b33102ba748ea9d, type: 3}
+  characterName: Cat
+  characterModel: {fileID: 3802211957609338931, guid: 650cfbc9e92f4084dbe314d5ab57e129, type: 3}
   dialogues:
-  - What a twisted place am I. Well, my dear, you're the only one present for me
-    to roll over. Tell me where we both are, my dear, well-dressed friend and companion.
-  - Oh, I'm flattered. This armour was made by the best blacksmiths in my country,
-    the one that kisses the Atlantic.
-  - I was in North Africa waging war in the name of God the Father when I got lost
-    and came here, I have to somehow get back to the battlefield with my people.
-  - I don't know how I ended up in a place like this... It was in a huge fog. I lost
-    sight of my soldiers and eventually ended up here.
-  - I apologise if you don't look like the first one, but I'm a king and I wouldn't
-    want someone I've never seen to treat me like that.
-  - I see no reason for such foul language to come out of your mouth. If what you're
-    looking for is my hatred and anger, it's only reserved for the Moors to the south.
-    Or are you like them?
-  - I beg you, and I can reward you, if you help me get out of these lands. Or are
-    you a foreigner and unable to understand my language?
-  - I will refrain from dialogue with you because I don't want to cross the line
-    of honour and respect.
-  isGoodPerson: 1
+  - "*MIAU* *miau\u2026* *MIAAUU* *MIAU, MIAU, MIAU* *MIAUUU* *MIAU* *MIAU* *MIAAAAU*"
+  - "*MIAU* *MIAU\u2026* *MIAAUU* *MIAU, MIAU* *MIAUUU* *MIAU* *MIAU* *MIAU* *PURR*
+    *PURR* *PUUUUUURRRRRRRRRRRRR* *NYAN*"
+  - '*Miu* *MIAUUUU* *MIAU* *MIAU* *Miu* *PUUURRR*'
+  - "*MIAU\u2026* *MIAU\u2026* *MIU\u2026*"
+  - '*MI-* *MIAU* *MIAU*'
+  - '*HIIIISSSS* *ROAR* *HISSSS*'
+  - '*MIU?*'
+  - '*ZZZZZZ* *ZZZZZZ* *zzzzz*'
+  isGoodPerson: 0
   complimentLevel: -1
-  educatedLevel: 1
-  neutralLevel: 1
-  rudeLevel: 0
-  insultLevel: 1
-  ignoreLevel: -1
+  educatedLevel: 0
+  neutralLevel: 0
+  rudeLevel: 1
+  insultLevel: 2
+  ignoreLevel: 1
   wrathLevel: 2
   lustLevel: 2
   gluttonyLevel: 2
