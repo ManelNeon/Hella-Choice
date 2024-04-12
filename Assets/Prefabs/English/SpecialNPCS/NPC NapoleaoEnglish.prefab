@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Napoleon Bonaparte
-  characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
+  characterModel: {fileID: 1244006484259754711, guid: 5a704b9a20d068f4fbe9f8a1c1bb5cdd, type: 3}
   dialogues:
   - Where did I come from? Lands as hot as the equator? Speak demon. Did the one
     in the boat fool me? He said he was sailing with a stop at the Pantheon. Put

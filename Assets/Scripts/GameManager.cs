@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject[] npcsPrefabs;
 
-    [SerializeField] List<GameObject> specialNPCPrefabs;
+    [SerializeField] GameObject[] specialNPCPrefabs;
 
     [Header("Hell Scores")]
 
@@ -88,6 +88,10 @@ public class GameManager : MonoBehaviour
     int prideHellScore;
 
     int randomNumber = -1;
+
+    NPCFather currentNPC;
+
+    int[] specialsSize;
 
     public void OpenTablet()
     {
@@ -143,6 +147,13 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        specialsSize = new int[specialNPCPrefabs.Length];
+
+        for (int i = 0; i < specialsSize.Length; i++)
+        {
+            specialsSize[i] = specialsSize.Length + 1;
+        }
+
         Instance = this;
 
         audioSource = GetComponent<AudioSource>();
@@ -156,15 +167,18 @@ public class GameManager : MonoBehaviour
 
     void ChangeNPC()
     {
-        NPCFather currentNPC = firstNPCPrefab.GetComponent<NPCFather>();
-
         if (!firstNPC && !secondNPC)
         {
             int isSpecial = 0;
 
-            if (specialNPCPrefabs.Count != 0)
+            for (int i = 0; i < specialNPCPrefabs.Length; i++)
             {
-                isSpecial = Random.Range(1,101);
+                if (specialsSize[i] == specialsSize.Length + 1)
+                {
+                    isSpecial = Random.Range(1, 101);
+                    Debug.Log(isSpecial);
+                    break;
+                }
             }
 
             if (isSpecial < 70)
@@ -178,13 +192,18 @@ public class GameManager : MonoBehaviour
 
                 currentNPC = npcsPrefabs[randomNumber].GetComponent<NPCFather>();
             }
-            else
+            else if (isSpecial >= 70)
             {
-                randomNumber = Random.Range(0, specialNPCPrefabs.Count + 1);
+                randomNumber = Random.Range(0, specialNPCPrefabs.Length);
+
+                while (specialsSize[randomNumber] == randomNumber)
+                {
+                    randomNumber = Random.Range(0, specialNPCPrefabs.Length);
+                }
 
                 currentNPC = specialNPCPrefabs[randomNumber].GetComponent<NPCFather>();
 
-                specialNPCPrefabs.Remove(specialNPCPrefabs[randomNumber]);
+                specialsSize[randomNumber] = randomNumber;
             }
         }
         else if (firstNPC)

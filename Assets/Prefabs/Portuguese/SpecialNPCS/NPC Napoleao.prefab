@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "Napole\xE3o Bonaparte"
-  characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
+  characterModel: {fileID: 1244006484259754711, guid: 5a704b9a20d068f4fbe9f8a1c1bb5cdd, type: 3}
   dialogues:
   - "D\u2019onde vim parar? Terras quentes como o Equador? Falai de cornudo, o da
     barca enganou-me a mim? Disse ele que velejava com paragem no pante\xE3o. Baixe

@@ -1700,7 +1700,14 @@ MonoBehaviour:
   npcHolder: {fileID: 1482359708}
   firstNPCPrefab: {fileID: 4425775727080806319, guid: 4aa66763c4b998e4a9dbe2a98af0b333, type: 3}
   secondNPCPrefab: {fileID: 4425775727080806319, guid: 85537e4728f605f4091dbeba16a640d1, type: 3}
-  npcsPrefabs: []
+  npcsPrefabs:
+  - {fileID: 4425775727080806319, guid: 2cf2af91cad3acf49863d21e10a73940, type: 3}
+  - {fileID: 4425775727080806319, guid: cea4a175b3e04b14980a9b445f661137, type: 3}
+  - {fileID: 4425775727080806319, guid: a8928e5814e2e9d408963826ea694176, type: 3}
+  - {fileID: 4425775727080806319, guid: ea2a76a615eebc34cb446dba88366c79, type: 3}
+  - {fileID: 4425775727080806319, guid: 14111576ff399fd4eb4c180f423a09bd, type: 3}
+  - {fileID: 4425775727080806319, guid: 9c2145d4d35a34e488b3b61a667e8bfe, type: 3}
+  - {fileID: 4425775727080806319, guid: 512b920f0ad1ac146be9e365d3275bb6, type: 3}
   specialNPCPrefabs:
   - {fileID: 6419578826053471020, guid: dc0b970ed61fdbd4ba6c71afd6289d4e, type: 3}
   - {fileID: 6419578826053471020, guid: 0222c5c74781659498bc076adb9a375a, type: 3}
