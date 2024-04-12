@@ -117,18 +117,18 @@ MonoBehaviour:
   - You don't realise how magnificent it is to talk like someone like me, it's not
     even worth wasting my time on you.
   isGoodPerson: 0
-  complimentLevel: -1
-  educatedLevel: 0
-  neutralLevel: 1
-  rudeLevel: -1
-  insultLevel: 2
+  complimentLevel: -2
+  educatedLevel: -1
+  neutralLevel: 0
+  rudeLevel: 2
+  insultLevel: 3
   ignoreLevel: 3
-  wrathLevel: -3
-  lustLevel: -2
-  gluttonyLevel: -1
+  wrathLevel: 2
+  lustLevel: 1
+  gluttonyLevel: -3
   greedLevel: 0
-  slothLevel: 1
-  envyLevel: 2
+  slothLevel: -2
+  envyLevel: -1
   prideLevel: 3
 --- !u!95 &1978234143883064882
 Animator:

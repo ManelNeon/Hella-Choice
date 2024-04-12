@@ -117,18 +117,18 @@ MonoBehaviour:
     like me has somewhere else to be.
   - Don't care, dont bother me the my soul is yet to arrive into my body.
   isGoodPerson: 0
-  complimentLevel: -1
-  educatedLevel: 0
-  neutralLevel: 1
-  rudeLevel: -1
+  complimentLevel: -2
+  educatedLevel: -2
+  neutralLevel: 0
+  rudeLevel: 2
   insultLevel: 2
-  ignoreLevel: 3
-  wrathLevel: -3
-  lustLevel: -2
-  gluttonyLevel: -1
+  ignoreLevel: 2
+  wrathLevel: 2
+  lustLevel: 1
+  gluttonyLevel: -2
   greedLevel: 0
-  slothLevel: 1
-  envyLevel: 2
+  slothLevel: -3
+  envyLevel: -1
   prideLevel: 3
 --- !u!95 &1978234143883064882
 Animator:
