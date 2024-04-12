@@ -1700,10 +1700,7 @@ MonoBehaviour:
   npcHolder: {fileID: 1482359708}
   firstNPCPrefab: {fileID: 4425775727080806319, guid: 4aa66763c4b998e4a9dbe2a98af0b333, type: 3}
   secondNPCPrefab: {fileID: 4425775727080806319, guid: 85537e4728f605f4091dbeba16a640d1, type: 3}
-  npcsPrefabs:
-  - {fileID: 4425775727080806319, guid: 99b47497565917e44aa356b26f9c119e, type: 3}
-  - {fileID: 7087671437207022108, guid: c754310ce55af6649be9aff98092de36, type: 3}
-  - {fileID: 6419578826053471020, guid: d9a899a2bf27f3149a166f25a7986612, type: 3}
+  npcsPrefabs: []
   specialNPCPrefabs:
   - {fileID: 6419578826053471020, guid: dc0b970ed61fdbd4ba6c71afd6289d4e, type: 3}
   - {fileID: 6419578826053471020, guid: 0222c5c74781659498bc076adb9a375a, type: 3}
