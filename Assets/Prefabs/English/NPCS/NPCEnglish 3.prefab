@@ -113,19 +113,19 @@ MonoBehaviour:
   - I don't care where you send me anymore. BECAUSE I'M HANDSOME. HANDSOME, HANDSOME,
     HANDSOME. ALL THE REPORTS ABOUT ME ARE HANSOME. SUIIIIIIII I'M HANDSOME
   isGoodPerson: 0
-  complimentLevel: -1
-  educatedLevel: 0
-  neutralLevel: 1
-  rudeLevel: -1
-  insultLevel: 2
-  ignoreLevel: 3
-  wrathLevel: -3
-  lustLevel: -2
-  gluttonyLevel: -1
-  greedLevel: 0
-  slothLevel: 1
-  envyLevel: 2
-  prideLevel: 3
+  complimentLevel: -2
+  educatedLevel: -1
+  neutralLevel: 0
+  rudeLevel: 1
+  insultLevel: 1
+  ignoreLevel: 1
+  wrathLevel: 1
+  lustLevel: 3
+  gluttonyLevel: -2
+  greedLevel: -1
+  slothLevel: -3
+  envyLevel: 0
+  prideLevel: 2
 --- !u!95 &1978234143883064882
 Animator:
   serializedVersion: 5

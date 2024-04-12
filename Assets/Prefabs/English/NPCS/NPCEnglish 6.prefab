@@ -111,19 +111,19 @@ MonoBehaviour:
   - Oh, and the desserts at the end, made by angels for sure!
   - I hope there's something left of that feast...
   isGoodPerson: 0
-  complimentLevel: -1
+  complimentLevel: 0
   educatedLevel: 0
-  neutralLevel: 1
-  rudeLevel: -1
-  insultLevel: 2
-  ignoreLevel: 3
+  neutralLevel: 0
+  rudeLevel: 1
+  insultLevel: 1
+  ignoreLevel: 1
   wrathLevel: -3
-  lustLevel: -2
-  gluttonyLevel: -1
-  greedLevel: 0
-  slothLevel: 1
-  envyLevel: 2
-  prideLevel: 3
+  lustLevel: 1
+  gluttonyLevel: 3
+  greedLevel: -2
+  slothLevel: 2
+  envyLevel: -1
+  prideLevel: 0
 --- !u!95 &1978234143883064882
 Animator:
   serializedVersion: 5

@@ -119,19 +119,19 @@ MonoBehaviour:
   - I've got to get back to my bakery, God knows how many loaves of bread the punks
     have taken from me on credit.
   isGoodPerson: 0
-  complimentLevel: -1
-  educatedLevel: 0
-  neutralLevel: 1
-  rudeLevel: -1
-  insultLevel: 2
-  ignoreLevel: 3
-  wrathLevel: -3
-  lustLevel: -2
-  gluttonyLevel: -1
-  greedLevel: 0
-  slothLevel: 1
-  envyLevel: 2
-  prideLevel: 3
+  complimentLevel: -2
+  educatedLevel: -2
+  neutralLevel: 0
+  rudeLevel: 1
+  insultLevel: 3
+  ignoreLevel: 2
+  wrathLevel: 2
+  lustLevel: -3
+  gluttonyLevel: 0
+  greedLevel: 3
+  slothLevel: -2
+  envyLevel: -1
+  prideLevel: 1
 --- !u!95 &1978234143883064882
 Animator:
   serializedVersion: 5

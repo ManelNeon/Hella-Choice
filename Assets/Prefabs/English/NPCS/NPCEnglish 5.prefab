@@ -116,20 +116,20 @@ MonoBehaviour:
   - Please don't ignore me. I just want to go on to the other side destined by God.
   - I hope that the Portuguese of today are at peace and looking after themselves
     and their neighbours.
-  isGoodPerson: 0
-  complimentLevel: -1
-  educatedLevel: 0
-  neutralLevel: 1
-  rudeLevel: -1
-  insultLevel: 2
-  ignoreLevel: 3
-  wrathLevel: -3
-  lustLevel: -2
-  gluttonyLevel: -1
-  greedLevel: 0
-  slothLevel: 1
+  isGoodPerson: 1
+  complimentLevel: -2
+  educatedLevel: -2
+  neutralLevel: 0
+  rudeLevel: 1
+  insultLevel: 3
+  ignoreLevel: 2
+  wrathLevel: 2
+  lustLevel: 2
+  gluttonyLevel: 2
+  greedLevel: 2
+  slothLevel: 2
   envyLevel: 2
-  prideLevel: 3
+  prideLevel: 2
 --- !u!95 &1978234143883064882
 Animator:
   serializedVersion: 5
