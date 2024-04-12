@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6419578826053471020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5279151949433129060}
+  - component: {fileID: 4276783291376260050}
+  m_Layer: 0
+  m_Name: NPC NapoleaoEnglish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5279151949433129060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419578826053471020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 879.02856, y: 593.8599, z: 13.719332}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4276783291376260050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419578826053471020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Napoleon Bonaparte
+  characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
+  dialogues:
+  - Where did I come from? Lands as hot as the equator? Speak demon. Did the one
+    in the boat fool me? He said he was sailing with a stop at the Pantheon. Put
+    this table down, you bastard. I'll demand it or proceed to kill you.
+  - You are a guy who knows what he's talking about. I see you know who I am and
+    my importance. And anyone who treats me below those levels... send them to the
+    guillotine.
+  - Speak to me as if I were your father. Well, I'm not. Shall I call in the executioners
+    or shall I proceed my self with the bloodiest execution you've ever experienced?
+    I hate anyone who can't address me as "the very great Emperor of France".
+  - The way you talk... I feel offended. The indifference is irritating and agonising.
+    Your height... YOUR HEIGHT AND HOW YOU SHOW YOURSELF INDIFFERENT TO MINE... I'll
+    kill you if you don't get down on your knees!
+  - OH! HOW DARE YOU. You think you're... *Cof* You can't treat me like that... *Maybe
+    you can...* Continuing. If the King of Portugal had treated me like this instead
+    of strategically retreating to Brazil, I wouldn't have invaded the country twice
+    more.
+  - "AH! YES! PLEASE. KEEP IT UP. REMIND ME WHEN I ASKED MARIA LU\xCDSA TO INSULT
+    ME LIKE THAT and hit me..."
+  - How dare you ignore me! Do you want me to shove a baguette up your ass?!
+  - I'll send hordes of soldiers to your door and then you'll know who's coming "El
+    mui grandioso imperador de France...
+  isGoodPerson: 0
+  complimentLevel: 0
+  educatedLevel: 0
+  neutralLevel: 1
+  rudeLevel: 2
+  insultLevel: -1
+  ignoreLevel: 3
+  wrathLevel: 3
+  lustLevel: 0
+  gluttonyLevel: -3
+  greedLevel: 1
+  slothLevel: -2
+  envyLevel: -1
+  prideLevel: 2

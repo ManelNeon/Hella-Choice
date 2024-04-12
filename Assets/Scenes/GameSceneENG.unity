@@ -1698,14 +1698,12 @@ MonoBehaviour:
   hellParticles: {fileID: 1538793945}
   heavenParticles: {fileID: 1658368527}
   npcHolder: {fileID: 1482359708}
-  firstNPCPrefab: {fileID: 4425775727080806319, guid: 4aa66763c4b998e4a9dbe2a98af0b333, type: 3}
-  secondNPCPrefab: {fileID: 4425775727080806319, guid: 85537e4728f605f4091dbeba16a640d1, type: 3}
+  firstNPCPrefab: {fileID: 4425775727080806319, guid: c4ee0d7571539b14f951de4f2c8b688b, type: 3}
+  secondNPCPrefab: {fileID: 4425775727080806319, guid: 9fb2eeda9cce5224489e0e476533d347, type: 3}
   npcsPrefabs:
-  - {fileID: 4425775727080806319, guid: 99b47497565917e44aa356b26f9c119e, type: 3}
-  - {fileID: 7087671437207022108, guid: c754310ce55af6649be9aff98092de36, type: 3}
-  - {fileID: 6419578826053471020, guid: d9a899a2bf27f3149a166f25a7986612, type: 3}
+  - {fileID: 6419578826053471020, guid: e3b6b0e733b34bf48987df228eb916b2, type: 3}
   specialNPCPrefabs:
-  - {fileID: 6419578826053471020, guid: dc0b970ed61fdbd4ba6c71afd6289d4e, type: 3}
+  - {fileID: 6419578826053471020, guid: e3b6b0e733b34bf48987df228eb916b2, type: 3}
   heavenButton: {fileID: 1969281709}
   wrathScoreText: {fileID: 1737601125}
   lustScoreText: {fileID: 753531155}
@@ -5049,7 +5047,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f7b2ef3eabf6fc47a28b153de1fd4f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7037e7a7bffe0d24ba64e5dcaf3f85c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18515,7 +18513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e39d2ce7136471347afc9194d5d10179, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4ffbd40cfba4964bb754a66608421d0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

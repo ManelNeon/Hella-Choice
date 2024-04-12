@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6419578826053471020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5279151949433129060}
+  - component: {fileID: 4276783291376260050}
+  m_Layer: 0
+  m_Name: "NPC Sebasti\xE3oEnglish"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5279151949433129060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419578826053471020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 879.02856, y: 593.8599, z: 13.719332}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4276783291376260050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419578826053471020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "D. Sebasti\xE3o"
+  characterModel: {fileID: 8908652267312540732, guid: 022fafbdcbeddea46b33102ba748ea9d, type: 3}
+  dialogues:
+  - "Em que s\xEDtio distorcido estou. Pois meu caro, sois o \xFAnico presente a
+    meu arrega\xE7o. Conta-me d\u2019onde estamos nos dois meu caro, amigo, companheiro
+    bem vestido."
+  - "Oh, sinto-me lisonjeado. Esta armadura foi feita pelos melhores ferreiros do
+    meu pa\xEDs, aquele que beija o Atl\xE2ntico."
+  - "Estava no Norte de Africa a fazer a guerra em nome do Deus Pai quando me perdi
+    e vim aqui ter, tenho de voltar de alguma forma at\xE9 ao campo de batalha para
+    junto da minha gente."
+  - "Num sei como vim acabar em tal s\xEDtio como este\u2026 Foi em meio a um enorme
+    nevoeiro. Perdi os meus soldados de vista e eventualmente acabei aqui."
+  - "Pe\xE7o desculpa se n\xE3o parece a primeiro ver, mas eu sou rei e n\xE3o gostaria
+    que algu\xE9m a quem nunca vi me trate dessa forma."
+  - "Eu n\xE3o vejo raz\xE3o para tais baixarias sa\xEDrem dessa boca sua. Se o que
+    procura \xE9 o meu \xF3dio e raiva, ele est\xE1 apenas reservado aos mouros a
+    Sul. Ou sois v\xF3s um como eles?"
+  - "Pe\xE7o-lhe, e posso recompens\xE1-lo, se me ajudar a sair destas tais terras.
+    Ou sois estrangeiro e incapaz de perceber o meu linguajar?"
+  - "Irei me abster de dialogar com v\xF3s pois n\xE3o quero saltar a linha da honra
+    e respeito."
+  isGoodPerson: 1
+  complimentLevel: -1
+  educatedLevel: 1
+  neutralLevel: 1
+  rudeLevel: 0
+  insultLevel: 1
+  ignoreLevel: -1
+  wrathLevel: 2
+  lustLevel: 2
+  gluttonyLevel: 2
+  greedLevel: 2
+  slothLevel: 2
+  envyLevel: 2
+  prideLevel: 2

@@ -546,9 +546,49 @@ public class GameManager : MonoBehaviour
 
         Destroy(npcHolder.npcObject);
 
+        CheckGameOver();
+
         npcHolder.StartCoroutine(npcHolder.StartDialogue());
 
         yield break;
+    }
+
+    void CheckGameOver()
+    {
+        if (wrathHellScore == -15)
+        {
+            Application.Quit();
+        }
+
+        if (lustHellScore == -15)
+        {
+            Application.Quit();
+        }
+
+        if (gluttonyHellScore == -15)
+        {
+            Application.Quit();
+        }
+
+        if (greedHellScore == -15)
+        {
+            Application.Quit();
+        }
+
+        if (slothHellScore == -15)
+        {
+            Application.Quit();
+        }
+
+        if (envyHellScore == -15)
+        {
+            Application.Quit();
+        }
+
+        if (prideHellScore == -15)
+        {
+            Application.Quit();
+        }
     }
 
     IEnumerator ScoreNotification(bool multiplePoints, int hellScore, string hellName)
@@ -618,7 +658,6 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        
 
         scoreDisplay.alpha = 1;
 
