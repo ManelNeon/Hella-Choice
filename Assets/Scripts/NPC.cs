@@ -45,6 +45,15 @@ public class NPC : NPCFather
 
     [SerializeField] Button buttonHeaven;
 
+    [SerializeField] Button buttonRandom;
+
+    [Header("Sounds")]
+    [SerializeField] AudioSource audioSource;
+
+    [SerializeField] AudioClip bellSound;
+
+    [SerializeField] AudioClip talkingSound;
+
     int index;
 
     int stress;
@@ -54,6 +63,7 @@ public class NPC : NPCFather
     [HideInInspector] public GameObject npcObject;
 
     [HideInInspector] public Animator npcAnimator;
+
 
     private void Start()
     {
@@ -68,6 +78,7 @@ public class NPC : NPCFather
             //if the dialogue text is the same as the one on the UI
             if (displayText.text != dialogues[index])
             {
+                audioSource.Stop();
                 //we stop all coroutines (the writing of the text)
                 StopAllCoroutines();
 
@@ -113,8 +124,16 @@ public class NPC : NPCFather
 
         npcAnimator.Play("GoingUp");
 
+        yield return new WaitForSeconds(.1f);
+
+        audioSource.Stop();
+
+        audioSource.PlayOneShot(bellSound);
+
         yield return new WaitForSeconds(1);
-        
+
+        audioSource.Stop();
+
         //and we start the corotine for the writing of the text
         NextLine(0);
 
@@ -126,9 +145,15 @@ public class NPC : NPCFather
     {
         foreach (char c in dialogues[index].ToCharArray())
         {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(talkingSound);
+            }
             displayText.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+
+        audioSource.Stop();
 
         buttonsHolder.SetActive(true);
 
@@ -172,6 +197,8 @@ public class NPC : NPCFather
         buttonHellEnvy.onClick.AddListener(SendToEnvy);
 
         buttonHellPride.onClick.AddListener(SendToPride);
+
+        buttonRandom.onClick.AddListener(SendToRandom);
     }
 
     public void TakeButtonsPurpose()
@@ -203,6 +230,8 @@ public class NPC : NPCFather
         buttonHellEnvy.onClick.RemoveAllListeners();
 
         buttonHellPride.onClick.RemoveAllListeners();
+
+        buttonRandom.onClick.RemoveAllListeners();
     }
 
     void ComplimentButton()
@@ -368,6 +397,45 @@ public class NPC : NPCFather
         TakeButtonsPurpose();
 
         GameManager.Instance.SendToPride(prideLevel);
+    }
+
+    void SendToRandom()
+    {
+        int randomNumber = Random.Range(1, 8);
+
+        switch(randomNumber)
+        {
+            case 1:
+                SendToWrath();
+                break;
+
+            case 2:
+                SendToLust();
+                break;
+
+            case 3:
+                SendToGluttony();
+                break;
+
+            case 4:
+                SendToGreed();
+                break;
+
+            case 5:
+                SendToSloth();
+                break;
+
+            case 6:
+                SendToEnvy();
+                break;
+
+            case 7:
+                SendToPride();
+                break;
+
+            default:
+                break;
+        }
     }
 }
 

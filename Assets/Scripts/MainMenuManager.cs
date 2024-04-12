@@ -5,28 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [SerializeField] GameObject languageMenu;
+
+    private void Start()
+    {
+        languageMenu.SetActive(false);
+    }
+
     public void Play()
     {
-        if (LanguageManager.Instance.isPortuguese)
-        {
-            SceneManager.LoadScene(1);
-        }
-        else
-        {
-            SceneManager.LoadScene(2);
-        }
+        languageMenu.SetActive(true);
     }
 
     public void ClickPortuguese()
     {
-        //put something showing its portuguese
-
         LanguageManager.Instance.isPortuguese = true;
+
+        SceneManager.LoadScene(1);
     }
 
     public void ClickEnglish()
     {
         LanguageManager.Instance.isPortuguese = false;
+
+        SceneManager.LoadScene(2);
     }
 
     public void EndGame()

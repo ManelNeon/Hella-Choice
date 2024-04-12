@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject secondTutorialUI;
 
+    [SerializeField] GameObject downButton;
+
+    [SerializeField] GameObject upButton;
+
     [HideInInspector] public bool down;
 
     bool firstNPC;
@@ -37,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject[] npcsPrefabs;
 
-    [SerializeField] GameObject[] specialNPCPrefabs;
+    [SerializeField] List<GameObject> specialNPCPrefabs;
 
     [Header("Hell Scores")]
 
@@ -85,6 +89,28 @@ public class GameManager : MonoBehaviour
 
     int randomNumber = -1;
 
+    public void OpenTablet()
+    {
+        down = true;
+
+        Camera.main.GetComponent<Animator>().Play("GoingDown");
+
+        downButton.SetActive(false);
+
+        upButton.SetActive(true);
+    }
+
+    public void CloseTablet()
+    {
+        down = false;
+
+        Camera.main.GetComponent<Animator>().Play("GoingBack");
+
+        downButton.SetActive(true);
+
+        upButton.SetActive(false);
+    }
+
     public void CloseTutorial(bool isOne)
     {
         if (isOne)
@@ -107,7 +133,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        heavenButton.SetActive(true);
+        heavenButton.SetActive(false);
 
         firstNPC = true;
 
@@ -134,14 +160,32 @@ public class GameManager : MonoBehaviour
 
         if (!firstNPC && !secondNPC)
         {
-            int previousNumber = randomNumber;
+            int isSpecial = 0;
 
-            while (previousNumber == randomNumber)
+            if (specialNPCPrefabs.Count != 0)
             {
-                randomNumber = Random.Range(0, npcsPrefabs.Length);
+                isSpecial = Random.Range(1,101);
             }
 
-            currentNPC = npcsPrefabs[randomNumber].GetComponent<NPCFather>();
+            if (isSpecial < 70)
+            {
+                int previousNumber = randomNumber;
+
+                while (previousNumber == randomNumber)
+                {
+                    randomNumber = Random.Range(0, npcsPrefabs.Length);
+                }
+
+                currentNPC = npcsPrefabs[randomNumber].GetComponent<NPCFather>();
+            }
+            else
+            {
+                randomNumber = Random.Range(0, specialNPCPrefabs.Count + 1);
+
+                currentNPC = specialNPCPrefabs[randomNumber].GetComponent<NPCFather>();
+
+                specialNPCPrefabs.Remove(specialNPCPrefabs[randomNumber]);
+            }
         }
         else if (firstNPC)
         {
@@ -155,7 +199,17 @@ public class GameManager : MonoBehaviour
         {
             currentNPC = secondNPCPrefab.GetComponent<NPCFather>();
 
+            OpenTablet();
+
+            down = true;
+
+            downButton.SetActive(false);
+
+            upButton.SetActive(true);
+
             secondTutorialUI.SetActive(true);
+
+            heavenButton.SetActive(true);
 
             Time.timeScale = 0;
         }
@@ -456,7 +510,7 @@ public class GameManager : MonoBehaviour
 
         audioSource.PlayOneShot(clickSound);
 
-        Camera.main.GetComponent<Animator>().Play("GoingBack");
+        CloseTablet();
 
         ChangeHellScore();
 

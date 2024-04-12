@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6419578826053471020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5279151949433129060}
+  - component: {fileID: 4276783291376260050}
+  m_Layer: 0
+  m_Name: NPC Napoleao
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5279151949433129060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419578826053471020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 879.02856, y: 593.8599, z: 13.719332}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4276783291376260050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419578826053471020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: "Napole\xE3o Bonaparte"
+  characterModel: {fileID: 2975122200983253304, guid: b4a6e348d5c29a843b3ffa09a66e7270, type: 3}
+  dialogues:
+  - "D\u2019onde vim parar? Terras quentes como o Equador? Falai de cornudo, o da
+    barca enganou-me a mim? Disse ele que velejava com paragem no pante\xE3o. Baixe
+    esta mesa desgra\xE7ado. Eu demando ou procedo por mat\xE1-lo."
+  - "Um indiv\xEDduo que sabe o que diz. Vejo que sabes quem sou e a minha import\xE2ncia.
+    E quem me trata a menos que esses n\xEDveis\u2026 mandai-os para a guilhotina."
+  - "Fala comigo como se fosse o seu pai. Pois n\xE3o sou. Devo chamar os carrascos
+    ou procedo pela execu\xE7\xE3o mais sangrenta que alguma vez sentiu? Odeio quem
+    n\xE3o se sabe dirigir a mim \u201CEl mui muito grandioso Imperador de Fran\xE7a\u201D."
+  - "A forma como fala\u2026 Sinto-me ofendido. A indiferen\xE7a \xE9 irritante e
+    agonizante. A sua altura\u2026 A SUA ALTURA E SE COMO SE MOSTRA INDIFERENTE \xC0
+    MINHA\u2026 vou mat\xE1-lo se n\xE3o se ajoelhar!"
+  - "OH! COMO SE ATREVE. Acha que est\xE1\u2026 *Cof* N\xE3o me pode tratar assim\u2026
+    *Talvez at\xE9 possa\u2026* Continuando. Se o rei de Portugal me tivesse tratado
+    assim em vez de se retirar estrategicamente para o Brasil eu n\xE3o teria invadido
+    o pa\xEDs mais 2 vezes."
+  - "AH! SIM! POR FAVOR. CONTINUA ASSIM. LEMBRA ME QUANDO PEDIA A MARIA LU\xCDSA
+    PARA ME INSULTAR ASSIM. e bater-me\u2026AH! SIM! POR FAVOR. CONTINUA ASSIM. LEMBRA
+    ME QUANDO PEDIA A MARIA LU\xCDSA PARA ME INSULTAR ASSIM. e bater-me\u2026"
+  - Como te atreves a ignorar a minha pessoa. Queres que te mande com uma baguete
+    nos cornos!
+  - "Seu ser desgra\xE7ado mandarei hordas de soldados at\xE9 \xE0 tua porta e a\xED
+    sabereis quem vem l\xE1 \u201CEl mui grandioso imperador de Fran\xE7a\u2026"
+  isGoodPerson: 0
+  complimentLevel: 0
+  educatedLevel: 0
+  neutralLevel: 1
+  rudeLevel: 2
+  insultLevel: -1
+  ignoreLevel: 3
+  wrathLevel: 3
+  lustLevel: 0
+  gluttonyLevel: -3
+  greedLevel: 1
+  slothLevel: -2
+  envyLevel: -1
+  prideLevel: 2

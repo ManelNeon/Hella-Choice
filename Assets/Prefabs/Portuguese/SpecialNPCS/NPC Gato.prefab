@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6419578826053471020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5279151949433129060}
+  - component: {fileID: 4276783291376260050}
+  m_Layer: 0
+  m_Name: NPC Gato
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5279151949433129060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419578826053471020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 879.02856, y: 593.8599, z: 13.719332}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4276783291376260050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419578826053471020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2606204bc5b7a224fae6378ce6a2a50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Gato
+  characterModel: {fileID: 3802211957609338931, guid: 650cfbc9e92f4084dbe314d5ab57e129, type: 3}
+  dialogues:
+  - "*MIAU* *miau\u2026* *MIAAUU* *MIAU, MIAU, MIAU* *MIAUUU* *MIAU* *MIAU* *MIAAAAU*"
+  - "*MIAU* *MIAU\u2026* *MIAAUU* *MIAU, MIAU* *MIAUUU* *MIAU* *MIAU* *MIAU* *PURR*
+    *PURR* *PUUUUUURRRRRRRRRRRRR* *NYAN*"
+  - '*Miu* *MIAUUUU* *MIAU* *MIAU* *Miu* *PUUURRR*'
+  - "*MIAU\u2026* *MIAU\u2026* *MIU\u2026*"
+  - '*MI-* *MIAU* *MIAU*'
+  - '*HIIIISSSS* *ROAR* *HISSSS*'
+  - '*MIU?*'
+  - '*ZZZZZZ* *ZZZZZZ* *zzzzz*'
+  isGoodPerson: 0
+  complimentLevel: -1
+  educatedLevel: 0
+  neutralLevel: 0
+  rudeLevel: 1
+  insultLevel: 2
+  ignoreLevel: 1
+  wrathLevel: 2
+  lustLevel: 2
+  gluttonyLevel: 2
+  greedLevel: 2
+  slothLevel: 2
+  envyLevel: 2
+  prideLevel: 2
